@@ -20,6 +20,7 @@ class ArticleAdminForm(forms.ModelForm):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'type', 'views_count')
+    prepopulated_fields = {'slug': ('title',)}
     form = ArticleAdminForm 
 
 admin.site.register(Author)

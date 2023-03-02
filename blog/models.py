@@ -139,7 +139,7 @@ class Social_network_profile(BaseModel):
     
 
 class Social_network_type(BaseModel):
-    """Ijtimoiy tarmoq turi"""
+    """Ijtimoiy tarmoq turlari uchun model"""
 
     name = models.CharField('Nomi', max_length=50)
     logo = models.ImageField('Rasmi', upload_to='social_network/logo/')
